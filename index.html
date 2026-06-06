@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UCL Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+  
+  <h1>UCL Simulator</h1>
+
+  <!-- MODE SWITCH -->
+<button onclick="showLeaguePhase()">League Phase</button>
+<button onclick="showKnockout()">Knockout Stage</button>
+
+  <!-- MAIN ACTIONS -->
+  <button onclick="generateDraw()">Generate League Phase Draw</button>
+  <button onclick="calculateTable()">Update Standings</button>
+<button onclick="generateKnockout()">Generate Knockout</button>
+  <!-- FIXED: NOW ACTUALLY CALLS FUNCTION -->
+  <button onclick="autoFillResults()">Simulate Matchday (Auto)</button>
+
+  <hr>
+
+  <!-- TEAM EDITOR -->
+  <h2>Team Editor</h2>
+  <div id="teamEditor"></div>
+
+  <hr>
+
+  <!-- LEAGUE PHASE CONTAINER -->
+<div id="leaguePhasePage">
+  
+  <h2>Fixtures</h2>
+  <div id="fixtures"></div>
+
+  <hr>
+
+  <h2>Enter Results</h2>
+  <p>Fill scores in fixtures then press "Update Standings"</p>
+
+  <div id="resultsBox"></div>
+
+  <hr>
+
+  <h2>Standings</h2>
+  <div id="standings"></div>
+
+</div>
+
+  <!-- KNOCKOUT PHASE CONTAINER -->
+<div id="knockoutPage" style="display:none;">
+  <h2>Knockout Stage</h2>
+  <div id="knockout"></div>
+</div>
+
+  <!-- SCRIPT (IMPORTANT: cache-bust added) -->
+  <script src="script.js?v=3"></script>
+
+</body>
+</html>
