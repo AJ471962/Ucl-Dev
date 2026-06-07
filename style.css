@@ -378,3 +378,7 @@ button[onclick*="advance"]:not(:disabled) {
 #knockout .team-logo {
   margin: 0 3px 0 0 !important;
 }
+
+#fixtures > div {
+  width: 100%;
+}
