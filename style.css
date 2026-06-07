@@ -17,6 +17,25 @@ input, textarea, select {
   font-size: 16px;
 }
 
+/* Fix standings table alignment */
+#standings td:nth-child(2) {
+  white-space: nowrap;
+  min-width: 140px;
+}
+
+.team-logo {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* For very narrow screens, allow wrap but keep logo aligned */
+@media (max-width: 600px) {
+  #standings td:nth-child(2) {
+    white-space: normal;
+    word-break: keep-all;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
