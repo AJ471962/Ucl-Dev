@@ -17,17 +17,17 @@ input, textarea, select {
   font-size: 16px;
 }
 
-/* Reduce space between rank and team columns */
+/* Reduce space between rank number and team logo */
 #standings td:first-child,
 #standings th:first-child {
-  padding-right: 4px;  /* less space after rank number */
-  width: 40px;         /* fixed narrow width for rank */
+  padding-right: 4px;   /* less space after the rank number */
   text-align: center;
+  width: 40px;          /* optional: fixed narrow width */
 }
 
 #standings td:nth-child(2),
 #standings th:nth-child(2) {
-  padding-left: 4px;   /* less space before team name */
+  padding-left: 4px;    /* less space before the logo/team */
 }
 
 /* Fix standings table alignment */
