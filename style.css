@@ -13,6 +13,10 @@
   --radius: 16px;
 }
 
+input, textarea, select {
+  font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
 }
