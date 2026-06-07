@@ -334,12 +334,12 @@ button[onclick*="advance"]:not(:disabled) {
   }
 
 .team-logo {
-  width: 18px !important;
-  height: 18px !important;
-  max-width: 18px !important;
-  max-height: 18px !important;
+  width: 12px !important;
+  height: 12px !important;
+  max-width: 12px !important;
+  max-height: 12px !important;
   vertical-align: middle;
-  margin-right: 4px;
+  margin-right: 3px;
   object-fit: contain;
   display: inline-block;
 }
