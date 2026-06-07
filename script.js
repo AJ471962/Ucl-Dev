@@ -55,10 +55,6 @@ let currentRound = null;
 let savedKnockout = {};
 let currentSeasonId = null;
 
-const STANDINGS_DISPLAY_NAMES = {
-  "Man United": "Manchester United",
-  "Man City" : "Manchester City",
-  "Dortmund" : "Borussia Dortmund",
 };
 
 /* ---------------- LOGO HELPERS ---------------- */
@@ -843,10 +839,6 @@ function renderTable(sorted) {
   html += `</table>`;        
   box.innerHTML = html;        
 }        
-
-function getStandingsName(team) {
-  return STANDINGS_DISPLAY_NAMES[team] || team;
-}
         
 /* ---------------- KNOCKOUT HELPERS ---------------- */        
         
