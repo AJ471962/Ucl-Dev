@@ -17,38 +17,6 @@ input, textarea, select {
   font-size: 16px;
 }
 
-/* Reduce space between rank number and team logo */
-#standings td:first-child,
-#standings th:first-child {
-  padding-right: 4px;   /* less space after the rank number */
-  text-align: center;
-  width: 40px;          /* optional: fixed narrow width */
-}
-
-#standings td:nth-child(0),
-#standings th:nth-child(0) {
-  padding-left: 4px;    /* less space before the logo/team */
-}
-
-/* Fix standings table alignment */
-#standings td:nth-child(2) {
-  white-space: nowrap;
-  min-width: 140px;
-}
-
-.team-logo {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-/* For very narrow screens, allow wrap but keep logo aligned */
-@media (max-width: 600px) {
-  #standings td:nth-child(2) {
-    white-space: normal;
-    word-break: keep-all;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -299,19 +267,16 @@ select:focus {
   margin: 0 6px;
 }
 
-/* Small button polish for the mode switch and top actions */
 body > button {
   margin-left: 16px;
   margin-bottom: 8px;
 }
 
-/* Make confirmation-style moments feel a little clearer */
 button[onclick*="delete"],
 button[onclick*="reset"] {
   border-color: rgba(217, 180, 92, 0.25);
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -335,7 +300,6 @@ button[onclick*="reset"] {
   }
 }
 
-/* Make important action buttons stand out a bit */
 button[onclick*="save"],
 button[onclick*="Generate"],
 button[onclick*="advance"],
@@ -347,7 +311,6 @@ button[onclick*="advance"]:not(:disabled) {
   animation: softPulse 1.8s infinite;
 }
 
-/* Mobile tuning */
 @media (max-width: 760px) {
   h1, h2, #fixtures, #standings, #knockout, #teamEditor {
     margin-left: 10px;
@@ -367,15 +330,18 @@ button[onclick*="advance"]:not(:disabled) {
   button {
     padding: 9px 12px;
   }
-  }
+}
 
+/* ========== LOGO & STANDINGS FIXES ========== */
+
+/* Team logo – force size and spacing */
 .team-logo {
   width: 24px !important;
   height: 24px !important;
   max-width: 24px !important;
   max-height: 24px !important;
   vertical-align: middle;
-  margin-right: 6px;
+  margin: 0 2px 0 0 !important;   /* only right margin 2px, no left margin */
   border-radius: 0;
   background: transparent;
   box-shadow: none;
@@ -383,7 +349,7 @@ button[onclick*="advance"]:not(:disabled) {
   display: inline-block;
 }
 
-/* Force standings table cells to have no extra padding */
+/* Force no extra spacing in standings table cells */
 #standings table,
 #standings tbody,
 #standings tr,
@@ -393,23 +359,30 @@ button[onclick*="advance"]:not(:disabled) {
   border-spacing: 0 !important;
 }
 
-/* Rank column: no right padding */
+/* Rank column – minimal right padding */
 #standings td:first-child,
 #standings th:first-child {
-  padding: 6px 2px 6px 4px !important;  /* top right bottom left – reduce right padding */
+  padding: 6px 0 6px 4px !important;   /* right padding = 0 */
   text-align: center;
-  width: 40px;
+  width: 36px;
 }
 
-/* Team column: no left padding */
+/* Team column – no left padding, prevent wrap */
 #standings td:nth-child(2),
 #standings th:nth-child(2) {
-  padding: 6px 4px 6px 2px !important;  /* left padding reduced */
+  padding: 6px 4px 6px 0 !important;   /* left padding = 0 */
+  white-space: nowrap;
 }
 
-/* Remove any margin from the logo itself */
-.team-logo {
-  margin-right: 2px !important;   /* reduce space after logo (between logo and text) */
-  margin-left: 0 !important;
+/* Allow wrapping on very narrow screens */
+@media (max-width: 600px) {
+  #standings td:nth-child(2) {
+    white-space: normal;
+  }
 }
 
+/* Fix for fixtures and knockout – keep logo inline */
+#fixtures .team-logo,
+#knockout .team-logo {
+  margin: 0 4px 0 0 !important;
+  }
