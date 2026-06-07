@@ -346,3 +346,10 @@ button[onclick*="advance"]:not(:disabled) {
   object-fit: contain;
   display: inline-block;
 }
+
+img.team-logo {
+  width: 24px !important;
+  height: auto !important;
+  max-width: 24px !important;
+}
+
