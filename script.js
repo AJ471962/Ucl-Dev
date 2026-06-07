@@ -99,10 +99,13 @@ function getLogoPath(teamName) {
   return mapping[teamName] || "";
 }
 
-function formatTeamWithLogo(teamName) {
-  const logo = getLogoPath(teamName);
-  if (!logo) return escapeHtml(teamName);
-  return `<img class="team-logo" src="${logo}" alt="${escapeHtml(teamName)}" onerror="this.style.display='none'"> ${escapeHtml(teamName)}`;
+function formatTeamWithLogo(name) {
+  return `
+    <span class="team" style="display:flex; align-items:center; justify-content:flex-start; gap:4px; width:100%;">
+      ${getLogo(name)}
+      <span>${name}</span>
+    </span>
+  `;
 }
 
 /* ---------------- HELPERS ---------------- */
