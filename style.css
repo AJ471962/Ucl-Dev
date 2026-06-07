@@ -334,14 +334,13 @@ button[onclick*="advance"]:not(:disabled) {
 
 /* ========== LOGO & STANDINGS FIXES ========== */
 
-/* Team logo – force size and spacing */
 .team-logo {
   width: 24px !important;
   height: 24px !important;
   max-width: 24px !important;
   max-height: 24px !important;
   vertical-align: middle;
-  margin: 0 2px 0 0 !important;   /* only right margin 2px, no left margin */
+  margin: 0 1px 0 0 !important;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
@@ -349,7 +348,6 @@ button[onclick*="advance"]:not(:disabled) {
   display: inline-block;
 }
 
-/* Force no extra spacing in standings table cells */
 #standings table,
 #standings tbody,
 #standings tr,
@@ -359,30 +357,24 @@ button[onclick*="advance"]:not(:disabled) {
   border-spacing: 0 !important;
 }
 
-/* Rank column – minimal right padding */
 #standings td:first-child,
 #standings th:first-child {
-  padding: 6px 0 6px 4px !important;   /* right padding = 0 */
+  padding: 6px 2px 6px 2px !important;
   text-align: center;
-  width: 36px;
+  width: 34px;
 }
 
-/* Team column – no left padding, prevent wrap */
 #standings td:nth-child(2),
 #standings th:nth-child(2) {
-  padding: 6px 4px 6px 0 !important;   /* left padding = 0 */
+  padding: 6px 2px 6px 2px !important;
   white-space: nowrap;
 }
 
-/* Allow wrapping on very narrow screens */
-@media (max-width: 600px) {
-  #standings td:nth-child(2) {
-    white-space: normal;
-  }
+#standings td:nth-child(2) .team {
+  gap: 4px !important;
 }
 
-/* Fix for fixtures and knockout – keep logo inline */
 #fixtures .team-logo,
 #knockout .team-logo {
-  margin: 0 4px 0 0 !important;
-  }
+  margin: 0 3px 0 0 !important;
+}
