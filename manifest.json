@@ -1,1 +1,20 @@
-
+{
+  "name": "UCL Dev",
+  "short_name": "UCL Dev",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0b0f1a",
+  "theme_color": "#0b0f1a",
+  "icons": [
+    {
+      "src": "uefa-champions.league-21-22-logo+%283%29.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
