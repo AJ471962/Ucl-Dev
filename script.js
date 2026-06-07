@@ -1,6 +1,6 @@
 const DEFAULT_TEAMS = [
 { name: "Real Madrid", pot: 1 },
-{ name: "Man City", pot: 1 },
+{ name: "Manchester City", pot: 1 },
 { name: "PSG", pot: 1 },
 { name: "Bayern Munich", pot: 1 },
 { name: "Inter Milan", pot: 1 },
@@ -9,8 +9,8 @@ const DEFAULT_TEAMS = [
 { name: "Liverpool", pot: 1 },
 { name: "Chelsea", pot: 1 },
 
-{ name: "Man United", pot: 2 },
-{ name: "Dortmund", pot: 2 },
+{ name: "Manchester United", pot: 2 },
+{ name: "Borussia Dortmund", pot: 2 },
 { name: "Porto", pot: 2 },
 { name: "Aston Villa", pot: 2 },
 { name: "Bayer Leverkusen", pot: 2 },
