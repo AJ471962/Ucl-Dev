@@ -397,3 +397,16 @@ button[onclick*="advance"]:not(:disabled) {
   gap: 4px !important;
   width: 100%;
 }
+
+#standings td:nth-child(2),
+#standings th:nth-child(2) {
+  text-align: left !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+#standings td:nth-child(2) .team {
+  justify-content: flex-start !important;
+  width: 100%;
+  gap: 4px !important;
+}
