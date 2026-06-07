@@ -366,7 +366,7 @@ button[onclick*="advance"]:not(:disabled) {
 
 #standings td:nth-child(2),
 #standings th:nth-child(2) {
-  padding: 6px 4px 6px 0px !important;
+  padding: 6px 2px 6px 2px !important;
   white-space: nowrap;
 }
 
@@ -380,5 +380,20 @@ button[onclick*="advance"]:not(:disabled) {
 }
 
 #fixtures > div {
+  width: 100%;
+}
+
+/* Left align team logos + names in standings */
+#standings td:nth-child(2),
+#standings th:nth-child(2) {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+#standings td:nth-child(2) .team {
+  justify-content: flex-start !important;
+  gap: 4px !important;
   width: 100%;
 }
