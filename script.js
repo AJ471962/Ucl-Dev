@@ -55,8 +55,6 @@ let currentRound = null;
 let savedKnockout = {};
 let currentSeasonId = null;
 
-};
-
 /* ---------------- LOGO HELPERS ---------------- */
 
 function getLogoPath(teamName) {
@@ -1051,7 +1049,7 @@ function saveKnockoutRound() {
   renderKnockout();        
   alert(`${roundLabel(currentRound)} saved.`);        
 }        
-        
+
 function resetKnockoutRound() {        
   if (!currentRound) return;        
   delete savedKnockout[currentRound];        
