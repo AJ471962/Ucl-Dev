@@ -13,6 +13,10 @@
   --radius: 16px;
 }
 
+input, textarea, select {
+  font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -263,19 +267,16 @@ select:focus {
   margin: 0 6px;
 }
 
-/* Small button polish for the mode switch and top actions */
 body > button {
   margin-left: 16px;
   margin-bottom: 8px;
 }
 
-/* Make confirmation-style moments feel a little clearer */
 button[onclick*="delete"],
 button[onclick*="reset"] {
   border-color: rgba(217, 180, 92, 0.25);
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -299,7 +300,6 @@ button[onclick*="reset"] {
   }
 }
 
-/* Make important action buttons stand out a bit */
 button[onclick*="save"],
 button[onclick*="Generate"],
 button[onclick*="advance"],
@@ -311,7 +311,6 @@ button[onclick*="advance"]:not(:disabled) {
   animation: softPulse 1.8s infinite;
 }
 
-/* Mobile tuning */
 @media (max-width: 760px) {
   h1, h2, #fixtures, #standings, #knockout, #teamEditor {
     margin-left: 10px;
@@ -331,4 +330,83 @@ button[onclick*="advance"]:not(:disabled) {
   button {
     padding: 9px 12px;
   }
+}
+
+/* ========== LOGO & STANDINGS FIXES ========== */
+
+.team-logo {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  vertical-align: middle;
+  margin: 0 1px 0 0 !important;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  object-fit: contain;
+  display: inline-block;
+}
+
+#standings table,
+#standings tbody,
+#standings tr,
+#standings td,
+#standings th {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+
+#standings td:first-child,
+#standings th:first-child {
+  padding: 6px 2px 6px 2px !important;
+  text-align: center;
+  width: 34px;
+}
+
+#standings td:nth-child(2),
+#standings th:nth-child(2) {
+  padding: 6px 2px 6px 2px !important;
+  white-space: nowrap;
+}
+
+#standings td:nth-child(2) .team {
+  gap: 4px !important;
+}
+
+#fixtures .team-logo,
+#knockout .team-logo {
+  margin: 0 3px 0 0 !important;
+}
+
+#fixtures > div {
+  width: 100%;
+}
+
+/* Left align team logos + names in standings */
+#standings td:nth-child(2),
+#standings th:nth-child(2) {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+#standings td:nth-child(2) .team {
+  justify-content: flex-start !important;
+  gap: 4px !important;
+  width: 100%;
+}
+
+#standings td:nth-child(2),
+#standings th:nth-child(2) {
+  text-align: left !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+#standings td:nth-child(2) .team {
+  justify-content: flex-start !important;
+  width: 100%;
+  gap: 4px !important;
 }
