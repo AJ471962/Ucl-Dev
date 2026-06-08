@@ -108,6 +108,11 @@ function formatTeamWithLogo(name) {
   `;
 }
 
+function getLogo(teamName) {
+  const path = getLogoPath(teamName);
+  return path ? `<img src="${path}" class="team-logo" alt="${teamName}">` : "";
+}
+
 /* ---------------- HELPERS ---------------- */
 
 function cloneData(value) {
